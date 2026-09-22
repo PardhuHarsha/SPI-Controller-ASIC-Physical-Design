@@ -1,42 +1,35 @@
-# SPI Controller – ASIC Physical Design using Qflow
+# SPI ASIC Physical Design using Qflow
 
-## Overview
+This project implements the physical design flow of a Serial Peripheral
+Interface (SPI) using the Qflow open-source ASIC design environment
+with the OSU018 technology library.
 
-This project was completed as part of my **VLSI Physical Design Internship at Maven Silicon**.
+## Flow
 
-The project focused on implementing a **Serial Peripheral Interface (SPI) controller** through the complete **ASIC Physical Design flow** using the open-source **Qflow** VLSI design environment.
+RTL → Synthesis → Placement → Routing → STA → DRC → LVS → GDSII
 
-The Verilog RTL design was taken through synthesis, placement, routing, Static Timing Analysis (STA), Design Rule Check (DRC), Layout Versus Schematic (LVS), and final GDSII generation.
+## Final Results
 
----
+- Technology: OSU018
+- Routing: 22209 routes completed
+- Failed routes: 0
+- STA paths analyzed: 321
+- Worst setup delay: 4.161 ns
+- Maximum operating frequency: 240.33 MHz
+- Minimum hold delay: 267 ps
+- Hold violations: 0
+- DRC errors: 0
+- LVS errors: 0
+- LVS devices matched: 3103
+- LVS nets matched: 3150
+- GDSII generation: Successful
 
-## Project Objectives
+## Tools
 
-- Understand the complete ASIC Physical Design flow.
-- Implement an SPI controller using Verilog HDL.
-- Perform logic synthesis and technology mapping.
-- Execute placement and routing.
-- Analyze timing using Static Timing Analysis.
-- Perform physical verification using DRC and LVS.
-- Generate the final GDSII layout.
-
----
-
-## ASIC Physical Design Flow
-
-```text
-Verilog RTL
-    ↓
-Logic Synthesis
-    ↓
-Placement
-    ↓
-Routing
-    ↓
-Static Timing Analysis (STA)
-    ↓
-DRC Verification
-    ↓
-LVS Verification
-    ↓
-GDSII Generation
+- Ubuntu Linux
+- Qflow
+- Yosys
+- GrayWolf
+- Qrouter
+- Magic
+- Netgen
